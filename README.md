@@ -6,10 +6,8 @@ This is a web-based CV (Curriculum Vitae) project designed to showcase your skil
 
 - [Features](#features)
 - [Installation](#installation)
-- [Usage](#usage)
 - [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ## Features
 
