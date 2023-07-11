@@ -17,7 +17,32 @@ $(document).ready(function() {
       }
     });
   }
-  
+    function isElementInViewport(element) {
+    var rect = element.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  // Function to handle scroll events
+  function handleScrollAnimations() {
+    $('.fade-in').each(function() {
+      if (isElementInViewport(this)) {
+        $(this).addClass('fade-in-visible');
+      }
+    });
+  }
+
+  // Call handleScrollAnimations() on page load
+  handleScrollAnimations();
+
+  // Call handleScrollAnimations() on scroll
+  $(window).scroll(function() {
+    handleScrollAnimations();
+  });
   // Handle scroll events
   $(window).on('scroll', function() {
     $('.fade-in').each(function() {
