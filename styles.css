@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(to right, #ff9966, #ff5e62);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Add transition for hover and click animations */
+  }
+  
+  nav a:hover {
+    color: #ff5e62; /* Change color on hover */
+  }
+  
+  nav a.active {
+    color: #ff5e62; /* Active link color */
+    font-weight: bold;
+  }
+  
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn ease 1s forwards;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  main {
+    width: 80%;
+    margin-top: 60px;
+  }
+  
+  section {
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  h1, h2, p {
+    text-align: center;
+  }
+  
+  .skill {
+    margin-bottom: 20px;
+  }
+  
+  .progress {
+    width: 100%;
+    background: #ddd;
+    height: 20px;
+    border-radius: 5px;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background: #ff5e62;
+    width: 0%;
+    border-radius: 5px;
+  }
+  
+  
+  
+  .timeline {
+    width: 100%;
+    position: relative;
+  }
+  
+  .timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: white;
+  }
+  
+  .event {
+    width: 50%;
+    margin: 20px 0;
+  }
+  
+  .event:nth-child(even) {
+    margin-left: 50%;
+  }
+  
+  .event:nth-child(odd) {
+    margin-right: 50%;
+  }
+/* "Back to top" button */
+#back-to-top {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #ff5e62; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+  }
+  
+  #back-to-top:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+  }
+  
