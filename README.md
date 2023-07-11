@@ -23,6 +23,20 @@ This is a web-based CV (Curriculum Vitae) project designed to showcase your skil
 ## Installation
 
 1. Clone the repository:
+git clone https://github.com/theyatokami/web-curriculum-vitae.git
 
-   ```shell
-   git clone https://github.com/your-username/web-cv-project.git
+2. Navigate to the project directory:
+cd web-cv-project
+
+3. Install the dependencies:
+npm install
+
+## Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+- Bootstrap - CSS framework for responsive design
+- Font Awesome - Icon toolkit
+- Parcel - Web application bundler
+
