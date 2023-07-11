@@ -65,10 +65,19 @@ $(document).ready(function() {
         'width': percent + '%'
       }, {
         duration: 3000,
-        easing: 'swing'  // This will make the animation start faster
+        easing: 'swing' // This will make the animation start faster
       });
     });
   }
+    // Call animateProgressBar function when 'Skills' section comes into view
+    $(window).scroll(function() {
+      var skillsTopOffset = $('#skills').offset().top;
+      var skillsTop = skillsTopOffset - $(window).height();
+      if ($(window).scrollTop() > skillsTop) {
+        animateProgressBar();
+      }
+    });
+  
 
   // Start the animation
   animateProgressBar();

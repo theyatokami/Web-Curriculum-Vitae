@@ -66,30 +66,53 @@ body {
     justify-content: center;
   }
   
-  h1, h2, p {
+  h1, h2, p, h3 {
     text-align: center;
   }
   
   .skill {
     margin-bottom: 20px;
   }
+  .skill-category {
+    margin-bottom: 20px;
+  }
+  
+  .skill-category h3 {
+    margin-bottom: 10px;
+  }
+  
+  .skill-category .skill {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
   
   .progress {
     width: 100%;
     background: #ddd;
-    height: 20px;
+    height: 20px; /* Adjust this to change the height of the loading bar */
     border-radius: 5px;
   }
   
   .progress-bar {
     height: 100%;
-    background: #ff5e62;
+    background: #f82222;
     width: 0%;
     border-radius: 5px;
   }
+  .progress-bar.programming {
+    background: #ff5e62; /* The color of the progress bar for Programming Languages */
+  }
   
+  .progress-bar.software {
+    background: #58b368; /* The color of the progress bar for Software Skills */
+  }
   
+  .progress-bar.languages {
+    background: #4276b8; /* The color of the progress bar for Languages */
+  }
   
+
   .timeline {
     width: 100%;
     position: relative;
@@ -126,7 +149,7 @@ body {
     z-index: 99; /* Make sure it does not overlap */
     border: none; /* Remove borders */
     outline: none; /* Remove outline */
-    background-color: #ff5e62; /* Set a background color */
+    background-color: #df4e4e; /* Set a background color */
     color: white; /* Text color */
     cursor: pointer; /* Add a mouse pointer on hover */
     padding: 15px; /* Some padding */
