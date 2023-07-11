@@ -1,6 +1,7 @@
 # Web-Curriculum-Vitae
 
 This is a web-based CV (Curriculum Vitae) project designed to showcase your skills, experience, and qualifications in a visually appealing and easily accessible format. The project provides an interactive and user-friendly interface for potential employers or visitors to learn more about you and your professional background.
+It is accessible through this link https://theyatokami.github.io/Web-Curriculum-Vitae/
 
 ## Table of Contents
 
