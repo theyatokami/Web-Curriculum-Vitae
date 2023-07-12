@@ -22,7 +22,7 @@ It is accessible through this link https://theyatokami.github.io/Web-Curriculum-
 ## Installation
 
 1. Clone the repository:
-git clone https://github.com/theyatokami/web-curriculum-vitae.git
+'git clone https://github.com/theyatokami/web-curriculum-vitae.git'
 
 2. Navigate to the project directory:
 cd web-cv-project
