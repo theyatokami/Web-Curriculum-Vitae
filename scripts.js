@@ -5,6 +5,38 @@ $(document).ready(function() {
   var back_to_top_button = $('#back-to-top');
   var sections = $('section');
   var nav_links = $('nav a');
+  var events = $('.event');
+  // Start with first event active
+  events.first().addClass('active');
+
+  $(window).scroll(function() {
+    events.each(function() {
+      if ($(this).offset().top <= $(window).scrollTop() + 200) {
+        // Add 'active' class instead of replacing it
+        $(this).addClass('active');
+      }
+    });
+  });
+  // Function to run when the event enters the viewport
+function handleIntersection(entries, observer) {
+  entries.forEach(entry => {
+    // If the event is in the viewport, add the 'active' class
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+    }
+  });
+}
+
+// Create a new Intersection Observer instance
+let observer = new IntersectionObserver(handleIntersection, {
+  // Trigger when the event is 50% in the viewport
+  threshold: 0.5
+});
+
+// Observe each event
+document.querySelectorAll('.event').forEach(event => {
+  observer.observe(event);
+});
 
   function updateActiveLink() {
     var scrollPos = $(document).scrollTop();

@@ -138,32 +138,79 @@ h1, h2, p, h3,h4 {
 
 
 .timeline {
-  width: 100%;
   position: relative;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.timeline::before {
-  content: "";
+/* The circles on the timeline */
+.timeline::after {
+  content: '';
   position: absolute;
+  width: 6px;
+  background-color: white;
   top: 0;
+  bottom: 0;
   left: 50%;
-  width: 2px;
-  height: 100%;
-  background: white;
+  margin-left: -3px;
 }
 
+/* Container around content */
 .event {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
   width: 50%;
-  margin: 20px 0;
+  transition: transform 2s;
+  opacity :1;
 }
 
-.event:nth-child(even) {
-  margin-left: 50%;
-}
 
+/* Place the container to the left */
 .event:nth-child(odd) {
-  margin-right: 50%;
+  right: 14%;
+  transform: translateX(-50%);
 }
+
+/* Place the container to the right */
+.event:nth-child(even) {
+  left: 50%;
+  transform: translateX(50%);
+}
+
+/* Add arrows to the left container */
+.event:nth-child(odd)::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 40%;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container */
+.event:nth-child(even)::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 40%;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+.event.active {
+  transform: translateX(0);
+}
+
+
 /* "Back to top" button */
 #back-to-top {
   display: none; /* Hidden by default */
