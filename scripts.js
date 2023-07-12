@@ -69,14 +69,13 @@ $(document).ready(function() {
     return false;
   });
 
-  // Handle navigation link clicks
-  $('nav a').click(function(event) {
-    event.preventDefault();
-    var target = $($.attr(this, 'href'));
+  $('a[href^="#"]').on('click', function(e) {
+    e.preventDefault();
+    var target = this.hash;
+    var $target = $(target);
     $('html, body').animate({
-      scrollTop: target.offset().top
-    }, 800);
-    return false;
+      'scrollTop': $target.offset().top
+    }, 1000, 'swing');
   });
 
   // Initialize
