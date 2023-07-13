@@ -73,6 +73,10 @@ h1, h2, p, h3,h4 {
   text-align: center;
 }
 
+intro.p{
+  width:"50px"
+}
+
 .profile-picture {
   position: relative;
   border-radius: 50%;
