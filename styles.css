@@ -74,12 +74,61 @@ h1, h2, p, h3,h4 {
   text-align: center;
 }
 .profile-picture {
+  position: relative;
   border-radius: 50%;
   width: 150px;
   height: 150px;
   object-fit: cover;
   margin-bottom: 20px;
+  transition: transform 2s;  /* Add this line */
 }
+.symbol {
+  position: absolute;
+  opacity: 0;
+  font-size: 30px;
+  animation: symbolFade 2s ease-out forwards;
+}
+
+@keyframes symbolFade {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(2);
+  }
+}
+
+.rotate {
+  animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+.rotate-back {
+  animation: rotation-back 1s forwards;
+}
+
+@keyframes rotation-back {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
 .event h3 {
   font-size: 20px;
   margin: 10px 0;

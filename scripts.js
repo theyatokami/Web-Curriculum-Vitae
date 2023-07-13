@@ -125,14 +125,36 @@ document.querySelectorAll('.event').forEach(event => {
       });
     });
   }
-    // Call animateProgressBar function when 'Skills' section comes into view
-    $(window).scroll(function() {
-      var skillsTopOffset = $('#skills').offset().top;
-      var skillsTop = skillsTopOffset - $(window).height();
-      if ($(window).scrollTop() > skillsTop) {
-        animateProgressBar();
-      }
-    });
+ // On mouse hover, profile picture rotates 360 degrees
+ $('.profile-picture').on('mouseenter', function() {
+  $(this).css({
+    'transition': 'transform 2s',
+    'transform': 'rotate(360deg)'
+  });
+  var symbols = ["+", "-", "*", "/"];
+  var symbol = symbols[Math.floor(Math.random() * symbols.length)];
+
+  var $symbol = $('<div class="symbol">' + symbol + '</div>').css({
+    left: Math.random() * $(this).width(),
+    top: Math.random() * $(this).height(),
+    color: '#ff5e62' // Change this to the color you want
+  });
+
+  $(this).append($symbol);
+
+  // Remove the symbol after the animation has finished
+  $symbol.on('animationend', function() {
+    $(this).remove();
+  });
+});
+
+// On mouse out, profile picture rotates back to original position
+$('.profile-picture').on('mouseleave', function() {
+  $(this).css({
+    'transition': 'transform 2s', // Transition back at twice the speed
+    'transform': 'rotate(0deg)'
+  });
+});
   
 
   // Start the animation
