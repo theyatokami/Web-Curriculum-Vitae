@@ -1,7 +1,7 @@
 $(document).ready(function() {
   // Append 'Back to Top' button to body
   $('body').append('<button id="back-to-top" title="Back to Top">Top</button>');
-  
+
   var back_to_top_button = $('#back-to-top');
   var sections = $('section');
   var nav_links = $('nav a');
@@ -17,26 +17,27 @@ $(document).ready(function() {
       }
     });
   });
+
   // Function to run when the event enters the viewport
-function handleIntersection(entries, observer) {
-  entries.forEach(entry => {
-    // If the event is in the viewport, add the 'active' class
-    if (entry.isIntersecting) {
-      entry.target.classList.add('active');
-    }
+  function handleIntersection(entries, observer) {
+    entries.forEach(entry => {
+      // If the event is in the viewport, add the 'active' class
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }
+
+  // Create a new Intersection Observer instance
+  let observer = new IntersectionObserver(handleIntersection, {
+    // Trigger when the event is 50% in the viewport
+    threshold: 0.5
   });
-}
 
-// Create a new Intersection Observer instance
-let observer = new IntersectionObserver(handleIntersection, {
-  // Trigger when the event is 50% in the viewport
-  threshold: 0.5
-});
-
-// Observe each event
-document.querySelectorAll('.event').forEach(event => {
-  observer.observe(event);
-});
+  // Observe each event
+  document.querySelectorAll('.event').forEach(event => {
+    observer.observe(event);
+  });
 
   function updateActiveLink() {
     var scrollPos = $(document).scrollTop();
@@ -49,7 +50,8 @@ document.querySelectorAll('.event').forEach(event => {
       }
     });
   }
-    function isElementInViewport(element) {
+
+  function isElementInViewport(element) {
     var rect = element.getBoundingClientRect();
     return (
       rect.top >= 0 &&
@@ -66,6 +68,12 @@ document.querySelectorAll('.event').forEach(event => {
         $(this).addClass('fade-in-visible');
       }
     });
+
+    $('.progress-bar').each(function() {
+      if (isElementInViewport(this)) {
+        animateProgressBar($(this));
+      }
+    });
   }
 
   // Call handleScrollAnimations() on page load
@@ -74,17 +82,6 @@ document.querySelectorAll('.event').forEach(event => {
   // Call handleScrollAnimations() on scroll
   $(window).scroll(function() {
     handleScrollAnimations();
-  });
-  // Handle scroll events
-  $(window).on('scroll', function() {
-    $('.fade-in').each(function() {
-      var top_of_element = $(this).offset().top;
-      var bottom_of_window = $(window).scrollTop() + $(window).height();
-      if (bottom_of_window > top_of_element) {
-        $(this).addClass('loaded');
-      }
-    });
-
     updateActiveLink();
 
     // Show 'Back to Top' button after scrolling 100px
@@ -114,34 +111,13 @@ document.querySelectorAll('.event').forEach(event => {
   updateActiveLink();
 
   // Animate the progress bars
-  function animateProgressBar() {
-    $('.progress-bar').each(function() {
-      var percent = $(this).data('percent');
-      $(this).animate({
-        'width': percent + '%'
-      }, {
-        duration: 3000,
-        easing: 'swing' // This will make the animation start faster
-      });
+  function animateProgressBar(progressBar) {
+    var percent = progressBar.data('percent');
+    progressBar.animate({
+      'width': percent + '%'
+    }, {
+      duration: 3000,
+      easing: 'swing' // This will make the animation start faster
     });
   }
- // On mouse hover, profile picture rotates 360 degrees
- $('.profile-picture').on('mouseenter', function() {
-  $(this).css({
-    'transition': 'transform 2s',
-    'transform': 'rotate(360deg)'
-  });
-});
-
-// On mouse out, profile picture rotates back to original position
-$('.profile-picture').on('mouseleave', function() {
-  $(this).css({
-    'transition': 'transform 2s', // Transition back at twice the speed
-    'transform': 'rotate(0deg)'
-  });
-});
-  
-
-  // Start the animation
-  animateProgressBar();
 });
