@@ -14,7 +14,7 @@ header {
   top: 0;
   width: 100%;
   z-index: 100;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 1);
   padding: 10px;
 }
 
@@ -73,9 +73,7 @@ h1, h2, p, h3,h4 {
   text-align: center;
 }
 
-intro.p{
-  width:"50px"
-}
+
 
 .profile-picture {
   position: relative;
@@ -342,4 +340,11 @@ section#education h1 {
   width: 100px;
   height: auto;
   margin-right: 10px;
+}
+section#intro {
+  width: 70%;
+  margin: 0 auto;
+}
+section#intro p {
+  text-align: left;
 }
