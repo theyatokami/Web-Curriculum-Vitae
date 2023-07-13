@@ -120,4 +120,18 @@ $(document).ready(function() {
       easing: 'swing' // This will make the animation start faster
     });
   }
+  $('.profile-picture').on('mouseenter', function() {
+    $(this).css({
+      'transition': 'transform 2s',
+      'transform': 'rotate(360deg)'
+    });
+  });
+  
+  // On mouse out, profile picture rotates back to original position
+  $('.profile-picture').on('mouseleave', function() {
+    $(this).css({
+      'transition': 'transform 2s', // Transition back at twice the speed
+      'transform': 'rotate(0deg)'
+    });
+  });
 });
