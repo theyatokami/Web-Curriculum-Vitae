@@ -82,27 +82,7 @@ h1, h2, p, h3,h4 {
   margin-bottom: 20px;
   transition: transform 2s;  /* Add this line */
 }
-.symbol {
-  position: absolute;
-  opacity: 0;
-  font-size: 30px;
-  animation: symbolFade 2s ease-out forwards;
-}
 
-@keyframes symbolFade {
-  0% {
-    opacity: 1;
-    transform: scale(0);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  100% {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(2);
-  }
-}
 
 .rotate {
   animation: rotation 2s infinite linear;

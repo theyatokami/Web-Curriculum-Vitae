@@ -131,21 +131,6 @@ document.querySelectorAll('.event').forEach(event => {
     'transition': 'transform 2s',
     'transform': 'rotate(360deg)'
   });
-  var symbols = ["+", "-", "*", "/"];
-  var symbol = symbols[Math.floor(Math.random() * symbols.length)];
-
-  var $symbol = $('<div class="symbol">' + symbol + '</div>').css({
-    left: Math.random() * $(this).width(),
-    top: Math.random() * $(this).height(),
-    color: '#ff5e62' // Change this to the color you want
-  });
-
-  $(this).append($symbol);
-
-  // Remove the symbol after the animation has finished
-  $symbol.on('animationend', function() {
-    $(this).remove();
-  });
 });
 
 // On mouse out, profile picture rotates back to original position
