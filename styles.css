@@ -125,7 +125,7 @@ h1, h2, p, h3,h4 {
   border-radius: 5px;
 }
 .progress-bar.programming {
-  background: #ff5e62; /* The color of the progress bar for Programming Languages */
+  background: #f059f0; /* The color of the progress bar for Programming Languages */
 }
 
 .progress-bar.software {
@@ -154,21 +154,50 @@ h1, h2, p, h3,h4 {
   left: 50%;
   margin-left: -3px;
 }
-
+.aernnova{
+  border-radius: 30%;
+}
 /* Container around content */
 .event {
   padding: 10px 40px;
   position: relative;
   background-color: inherit;
-  width: 50%;
+  width: 70%;
   transition: transform 2s;
   opacity :1;
 }
+.company-logo {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80px; /* adjust as needed */
+  height: 80px; /* adjust as needed */
+}
+
+/* Place the logo to the right for odd events */
+.event:nth-child(odd) .company-logo {
+  right: 100%;
+  margin-right: 0px; /* adjust as needed */
+}
+
+/* Place the logo to the left for even events */
+.event:nth-child(even) .company-logo {
+  left: 100%;
+  margin-left: 0px; /* adjust as needed */
+}
+
+/* Adjust styles for img inside .company-logo */
+.company-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 
 
 /* Place the container to the left */
 .event:nth-child(odd) {
-  right: 14%;
+  right: 35%;
   transform: translateX(-50%);
 }
 
@@ -177,6 +206,7 @@ h1, h2, p, h3,h4 {
   left: 50%;
   transform: translateX(50%);
 }
+
 
 /* Add arrows to the left container */
 .event:nth-child(odd)::before {
