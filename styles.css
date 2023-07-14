@@ -1,3 +1,5 @@
+/* styles.css */
+
 body {
   margin: 0;
   padding: 0;
@@ -8,6 +10,7 @@ body {
   flex-direction: column;
   align-items: center;
 }
+
 #particles-js {
   position: absolute;
   top: 0;
@@ -16,15 +19,15 @@ body {
   height: 100%;
   z-index: -1;
 }
+
 #intro {
   background: linear-gradient(135deg, #ff6d4c7e, #824fae77, #2a31ff7d, #ff2cbc84);
   border-radius: 20px;
   border: 2px solid white;
   position: relative;
   z-index: 1;
-  margin-top:40px;
+  margin-top: 40px;
 }
-
 
 #skills {
   background: linear-gradient(135deg, #000000, #313131);
@@ -32,17 +35,17 @@ body {
   border: 2px solid white;
   position: relative;
   z-index: 1;
-  margin-top:40px;
+  margin-top: 40px;
 }
+
 #projects {
-  background: linear-gradient(to right, #343434,#1a1a1a);
+  background: linear-gradient(to right, #343434, #1a1a1a);
   border-radius: 20px;
   border: 2px solid white;
   position: relative;
   z-index: 1;
-  margin-top:40px;
+  margin-top: 40px;
 }
-
 
 header {
   position: fixed;
@@ -66,15 +69,15 @@ nav {
 nav a {
   color: silver;
   text-decoration: none;
-  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Add transition for hover and click animations */
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 nav a:hover {
-  color: #ff5e62; /* Change color on hover */
+  color: #ff5e62;
 }
 
 nav a.active {
-  color: #ff5e62; /* Active link color */
+  color: #ff5e62;
   font-weight: bold;
 }
 
@@ -108,11 +111,13 @@ section {
   justify-content: center;
 }
 
-h1, h2, p, h3,h4 {
+h1,
+h2,
+p,
+h3,
+h4 {
   text-align: center;
 }
-
-
 
 .profile-picture {
   position: relative;
@@ -209,99 +214,69 @@ h1, h2, p, h3,h4 {
 
 .timeline {
   position: relative;
-  max-width: 900px;
-  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.timeline::after {
-  content: '';
+.timeline-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.checkpoint {
   position: absolute;
-  width: 6px;
-  background-color: white;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  margin-left: -3px;
+  width: 70px;
+  height: 70px;
+  left: 42%;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
 }
 
-.round-logo{
-  border-radius: 30%;
+.checkpoint img {
+  max-width: 60px;
+  max-height: 60px;
 }
 
-.event {
-  padding: 10px 40px;
-  width: 50%;
-  transition: transform 2s;
-  opacity :1;
-  background: #2a31ff7d;
-  border-radius: 10px;
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 20px;  
+  width: 0.4%;
+  left:49.6%;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - 40px);
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+.event-left {
+  right: 70%;
+  padding: 10px 10px;
+  width: 100%;
+  opacity: 1;
+  background: linear-gradient(to right, #1a1a1a, #343434);
+  border-radius: 5px;
   border: 2px solid white;
   position: relative;
   z-index: 1;
-  display: flex;
-  align-items: center;
-}
 
-.company-logo {
-  width: 80px;
-  height: 80px;
-  margin-right: 10px;
 }
-
-.event:nth-child(odd) .company-logo {
-  right: 100%;
-  margin-right: 0px;
-}
-
-.event:nth-child(even) .company-logo {
-  left: 100%;
-  margin-left: 0px;
-}
-
-.company-logo img {
+.event-right {
+  left: 70%;
+  padding: 10px 10px;
   width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.event:nth-child(odd) {
-  right: 15%;
-  transform: translateX(-10%);
-}
-
-.event:nth-child(even) {
-  left: 55%;
-  transform: translateX(10%);
-}
-
-.event:nth-child(odd)::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 40%;
-  width: 0;
+  opacity: 1;
+  background: linear-gradient(to right, #343434, #1a1a1a);
+  border-radius: 5px;
+  border: 2px solid white;
+  position: relative;
   z-index: 1;
-  right: 30px;
-  border: medium solid white;
-  border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent white;
-}
-
-.event:nth-child(even)::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 40%;
-  width: 0;
-  z-index: 1;
-  left: 30px;
-  border: medium solid white;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent white transparent transparent;
-}
-
-.event.active {
-  transform: translateX(0);
 }
 
 #back-to-top {
@@ -336,9 +311,12 @@ section#education h1 {
 
 .education-item {
   display: flex;
-
   align-items: flex-start;
-  margin: 20px 0;
+  margin: 20px ;
+  padding: 10px;
+  border-radius: 20px;
+  border: 2px solid white;
+  background: ;
 }
 
 .education-item img {
@@ -373,23 +351,27 @@ section#education h1 {
   flex-direction: column;
   align-items: flex-start;
 }
+
 .university-logo img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
 
-}.university-logo {
+.university-logo {
   width: 100px;
   height: auto;
   margin-right: 10px;
 }
 
-.introdetails{
+.introdetails {
   width: 70%;
 }
+
 section#intro p {
   text-align: left;
 }
+
 .projects-section {
   display: flex;
   flex-wrap: wrap;
@@ -400,10 +382,10 @@ section#intro p {
 .project-card {
   width: 400px;
   margin: 20px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Light shadow effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transition: transform 0.3s ease-in-out;
-  background-color: #151212; /* This is a common color for the card, you can change as needed */
-  border-radius: 10px; /* Rounded corners for a softer look */
+  background-color: #151212;
+  border-radius: 10px;
 }
 
 .project-card:hover {
@@ -414,14 +396,14 @@ section#intro p {
   width: 100%;
   aspect-ratio: 16/9;
   object-fit: cover;
-  border-radius: 10px 10px 0 0; /* Rounded corners at the top, straight corners at the bottom */
+  border-radius: 10px 10px 0 0;
 }
+
 .project-card img {
   width: 100%;
   object-fit: cover;
-  border-radius: 10px 10px 0 0; /* Rounded corners at the top, straight corners at the bottom */
+  border-radius: 10px 10px 0 0;
 }
-
 .project-info {
   padding: 15px;
 }
