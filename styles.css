@@ -2,8 +2,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', Arial, sans-serif;
-  background: linear-gradient(to right, #ff5e62, #c26488);
-  color: white;
+  background: linear-gradient(to right, #1a0d2a,rgb(113, 52, 85), rgb(106, 56, 116), #1a0d2a);
+  color: silver;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,11 +11,13 @@ body {
 
 header {
   position: fixed;
-  top: 0;
-  width: 100%;
+  top: 10px;
+  width: 90%;
   z-index: 100;
-  background-color: rgba(0, 0, 0, 1);
+  background-color: rgb(21, 20, 20);
   padding: 10px;
+  border-radius: 20px;
+  color: silver;
 }
 
 nav {
@@ -25,7 +27,7 @@ nav {
 }
 
 nav a {
-  color: white;
+  color: silver;
   text-decoration: none;
   transition: color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Add transition for hover and click animations */
 }
@@ -144,7 +146,7 @@ h1, h2, p, h3,h4 {
 
 .progress {
   width: 100%;
-  background: #ddd;
+  background: silver;
   height: 20px;
   border-radius: 5px;
 }
@@ -283,7 +285,7 @@ h1, h2, p, h3,h4 {
 }
 
 section#education {
-  color: white;
+  color: silver;
   padding: 40px;
 }
 
@@ -347,4 +349,53 @@ section#intro {
 }
 section#intro p {
   text-align: left;
+}
+.projects-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.project-card {
+  width: 400px;
+  margin: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Light shadow effect */
+  transition: transform 0.3s ease-in-out;
+  background-color: #151212; /* This is a common color for the card, you can change as needed */
+  border-radius: 10px; /* Rounded corners for a softer look */
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+.project-card video {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0; /* Rounded corners at the top, straight corners at the bottom */
+}
+.project-card img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0; /* Rounded corners at the top, straight corners at the bottom */
+}
+
+.project-info {
+  padding: 15px;
+}
+
+.project-info h3 {
+  margin-bottom: 10px;
+}
+
+.project-info p {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.project-info a {
+  color: #007bff; /* Adjust this color to match your theme */
+  text-decoration: none;
 }

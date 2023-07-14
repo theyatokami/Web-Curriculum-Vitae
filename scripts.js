@@ -134,4 +134,18 @@ $(document).ready(function() {
       'transform': 'rotate(0deg)'
     });
   });
+  $('.project-card').on('mouseenter', function() {
+    $(this).css({
+        'transition': 'transform 0.3s',
+        'transform': 'scale(1.05)'
+    });
+});
+
+$('.project-card').on('mouseleave', function() {
+    $(this).css({
+        'transition': 'transform 0.3s',
+        'transform': 'scale(1.0)'
+    });
+});
+
 });
