@@ -25,14 +25,7 @@ body {
   margin-top:40px;
 }
 
-.experienceeducation{
-  background: linear-gradient(135deg, #000000, #313131);
 
-  border-radius: 20px;
-  border: 2px solid white;
-  position: relative;
-  z-index: 1;
-}
 #skills {
   background: linear-gradient(135deg, #000000, #313131);
   border-radius: 20px;
@@ -42,7 +35,7 @@ body {
   margin-top:40px;
 }
 #projects {
-  background: linear-gradient(135deg, #ff6d4c7e, #824fae77, #2a31ff7d, #ff2cbc84);
+  background: linear-gradient(to right, #343434,#1a1a1a);
   border-radius: 20px;
   border: 2px solid white;
   position: relative;
@@ -237,19 +230,22 @@ h1, h2, p, h3,h4 {
 
 .event {
   padding: 10px 40px;
-  position: relative;
-  background-color: inherit;
-  width: 70%;
+  width: 50%;
   transition: transform 2s;
   opacity :1;
+  background: #2a31ff7d;
+  border-radius: 10px;
+  border: 2px solid white;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
 }
 
 .company-logo {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   width: 80px;
   height: 80px;
+  margin-right: 10px;
 }
 
 .event:nth-child(odd) .company-logo {
@@ -269,13 +265,13 @@ h1, h2, p, h3,h4 {
 }
 
 .event:nth-child(odd) {
-  right: 35%;
-  transform: translateX(-50%);
+  right: 15%;
+  transform: translateX(-10%);
 }
 
 .event:nth-child(even) {
-  left: 50%;
-  transform: translateX(50%);
+  left: 55%;
+  transform: translateX(10%);
 }
 
 .event:nth-child(odd)::before {
