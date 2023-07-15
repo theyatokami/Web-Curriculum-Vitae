@@ -224,11 +224,12 @@ h4 {
   margin-bottom: 40px;
 }
 
+
 .checkpoint {
   position: absolute;
-  width: 70px;
-  height: 70px;
-  left: 42%;
+  width: 65px;
+  height: 65px;
+  left: 42.5%;
   border-radius: 50%;
   background-color: #ffffff;
   display: flex;
@@ -240,14 +241,15 @@ h4 {
 .checkpoint img {
   max-width: 60px;
   max-height: 60px;
+  border-radius: 50%;
 }
 
 .timeline-item::before {
   content: "";
   position: absolute;
   top: 20px;  
-  width: 0.4%;
-  left:49.6%;
+  width: 0.6%;
+  left:49.4%;
   justify-content: center;
   align-items: center;
   height: calc(100% - 40px);
@@ -260,7 +262,7 @@ h4 {
   padding: 10px 10px;
   width: 100%;
   opacity: 1;
-  background: linear-gradient(to right, #1a1a1a, #343434);
+  background: linear-gradient(45deg, #27415f, #43184e);
   border-radius: 5px;
   border: 2px solid white;
   position: relative;
@@ -272,7 +274,7 @@ h4 {
   padding: 10px 10px;
   width: 100%;
   opacity: 1;
-  background: linear-gradient(to right, #343434, #1a1a1a);
+  background: linear-gradient(135deg, #c87d32, #43184e);
   border-radius: 5px;
   border: 2px solid white;
   position: relative;
@@ -316,7 +318,6 @@ section#education h1 {
   padding: 10px;
   border-radius: 20px;
   border: 2px solid white;
-  background: ;
 }
 
 .education-item img {

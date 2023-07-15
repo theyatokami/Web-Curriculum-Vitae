@@ -1,10 +1,12 @@
 <head>
-    <title>CV Estevan Biau-Loyer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="scripts.js"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <title>CV Estevan Biau-Loyer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="scripts.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!-- Add this line -->
 </head>
 <body>
   <header>
@@ -35,7 +37,7 @@
             <div class="checkpoint">
               <img src="images/ge-logo.png" alt="Company Logo">
             </div>
-            <div class="event-left">
+            <div class="event-left" data-aos="fade-left"  data-aos-duration="2000">
               <h2>IT engineer intern</h2>
               <p>General Electric</p>
               <h3>June 2023 - Present | Paris</h3>
@@ -46,7 +48,7 @@
             <div class="checkpoint">
               <img src="images/airbus-logo.png" alt="Company Logo">
             </div>
-            <div class="event-right">
+            <div class="event-right" data-aos="fade-right"  data-aos-duration="2000">
               <h2>Operator on the A350 XWB</h2>
               <p>Airbus</p>
               <h3>June 2021 - July 2021 | Toulouse</h3>
@@ -55,9 +57,9 @@
 
           <div class="timeline-item">
             <div class="checkpoint">
-              <img src="images/aernnova-logo.png" alt="Company Logo" class="round-logo">
+              <img src="images/aernnova-logo.png" alt="Company Logo">
             </div>
-            <div class="event-left">
+            <div class="event-left" data-aos="fade-left" data-aos-duration="2000">
               <h2>Mechanical design engineer intern</h2>
               <p>Aernnova</p>
               <h3>June 2017 - July 2017 | Madrid</h3>
@@ -66,9 +68,9 @@
 
           <div class="timeline-item">
             <div class="checkpoint">
-              <img src="images/logo-marine.png" alt="Company Logo" class="round-logo">
+              <img src="images/logo-marine.png" alt="Company Logo">
             </div>
-            <div class="event-right">
+            <div class="event-right" data-aos="fade-right" data-aos-duration="2000">
               <h2>Intern</h2>
               <p>French Navy</p>
               <h3>June 2017 - June 2017 | Brest</h3>
@@ -79,7 +81,7 @@
             <div class="checkpoint">
             <img src="images/danone-logo.png" alt="Company Logo">
             </div>
-            <div class="event-left">
+            <div class="event-left" data-aos="fade-left"data-aos-duration="2000" >
               <h2>Supply chain intern</h2>
               <p>Danone</p>
               <h3>June 2016 - June 2016 | Madrid</h3>
@@ -333,6 +335,9 @@
     },
     retina_detect: true
   });
+</script>
+<script>
+  AOS.init();
 </script>
 
 </body>
