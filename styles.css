@@ -301,69 +301,53 @@ h4 {
   background-color: #555;
 }
 
-section#education {
-  color: silver;
-  padding: 40px;
+#education .card {
+  width: 30%;
+  height: 200px;
+  perspective: 1000px;
+  border-radius: 10px;
+  margin-bottom: 5%;
 }
-
-section#education h1 {
+#education .card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
   text-align: center;
-  font-family: 'Poppins', Arial, sans-serif;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  padding-bottom: 10px;
+  
 }
-
-.education-item {
-  display: flex;
-  align-items: flex-start;
-  margin: 20px ;
-  padding: 10px;
-  border-radius: 20px;
+#education .card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+#education .card-front, 
+#education .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
   border: 2px solid white;
 }
 
-.education-item img {
-  width: 100px;
-  height: auto;
-  object-fit: contain;
-  margin-bottom: 10px;
+#education .card-front {
+  background: linear-gradient(150deg, #080808,#4b1b3c7d, #db0abf);
+  color: silver;
 }
 
-.education-item h2 {
-  text-align: center;
-  font-family: 'Poppins', Arial, sans-serif;
-  margin-bottom: 5px;
-}
-
-.education-description h2 {
-  text-align: left;
-  font-family: 'Poppins', Arial, sans-serif;
-  margin-bottom: 5px;
-}
-
-.education-description h3,
-.education-description p {
-  text-align: left;
-  margin: 0;
-  font-family: 'Poppins', Arial, sans-serif;
-}
-
-.education-description {
-  width: 400px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.university-logo img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+#education .card-back {
+  background: linear-gradient(to right, #343434, #1a1a1a);
+  color: silver;
+  transform: rotateY(180deg);
 }
 
 .university-logo {
   width: 100px;
-  height: auto;
-  margin-right: 10px;
+  height: 100px;
+  padding-top: 2%;
 }
+
 
 .introdetails {
   width: 70%;
