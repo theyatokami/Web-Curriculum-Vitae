@@ -190,7 +190,8 @@ h4 {
   width: 100%;
   background: silver;
   height: 20px;
-  border-radius: 5px;
+  border-radius: 10px;
+  border: solid whitesmoke;
 }
 
 .progress-bar {
@@ -346,12 +347,12 @@ margin-top: 2%;
 }
 
 #education .card-front {
-  background: linear-gradient(110deg, #0230ff85,rgba(44, 45, 94, 0.74),rgba(55, 56, 107, 0.753), #0230ff85);
-  color: silver;
+  background: linear-gradient(110deg, #0230ff85,rgba(87, 87, 207, 0.74),rgba(108, 108, 167, 0.753),rgba(87, 87, 207, 0.74), #13136e85);
+  color: rgb(0, 0, 0);
 }
 #education .card-front2 {
-  background: linear-gradient(110deg, #ce161685,rgb(83, 50, 50),rgb(83, 50, 50),  #ce161685);
-  color: silver;
+  background: linear-gradient(110deg, #ce161685,rgb(165, 94, 94),rgb(165, 94, 94),rgb(165, 94, 94),  #ce161685);
+  color: rgb(0, 0, 0);
 }
 /* Add this to your styles.css */
 
@@ -418,11 +419,15 @@ margin-top: 2%;
 
 
 .university-logo {
-  width: 100px;
-  height: 100px;
+  max-width: 100px;
+  max-height: 100px;
   padding-top: 2%;
 }
-
+.university-logo2 {
+  max-width: 100px;
+  max-height: 100px;
+  padding-top: 10%;
+}
 
 .introdetails {
   width: 70%;
