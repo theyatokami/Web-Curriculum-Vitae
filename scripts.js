@@ -7,6 +7,20 @@ $(document).ready(function() {
   var events = $('.event');
   events.first().addClass('active');
 
+  // Dark mode toggle
+  $('#dark-mode-toggle').click(function() {
+    $('body').toggleClass('dark-mode');
+    $('header').toggleClass('dark-mode');
+    $('nav a').toggleClass('dark-mode');
+    $('.intro').toggleClass('dark-mode');
+    $('.timeline-content').toggleClass('dark-mode');
+    $('.skill-category').toggleClass('dark-mode');
+    $('.education-card').toggleClass('dark-mode');
+    $('.project-card').toggleClass('dark-mode');
+    $('.contact').toggleClass('dark-mode');
+    $('#back-to-top').toggleClass('dark-mode');
+  });
+
   $(window).scroll(function() {
     events.each(function() {
       if ($(this).offset().top <= $(window).scrollTop() + 200) {

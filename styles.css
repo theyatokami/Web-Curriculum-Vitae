@@ -1,5 +1,6 @@
 /* styles.css */
 
+/* Light Mode Styles */
 body {
   margin: 0;
   padding: 0;
@@ -281,46 +282,8 @@ section {
 
 .contact {
   background: #f4f4f9;
-}
-
-#contact-form {
-  background: #ffffff;
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-#contact-form .form-group {
-  margin-bottom: 15px;
-}
-
-#contact-form label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-#contact-form input,
-#contact-form textarea {
-  width: calc(100% - 20px);
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-#contact-form button {
-  padding: 10px 20px;
-  background: #007bff;
-  color: #ffffff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-#contact-form button:hover {
-  background: #0056b3;
+  padding: 60px 20px;
+  text-align: center;
 }
 
 #back-to-top {
@@ -341,4 +304,54 @@ section {
 
 #back-to-top:hover {
   background-color: #0056b3;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background: #333;
+  color: #ddd;
+}
+
+header.dark-mode {
+  background: #222;
+}
+
+.nav-links a.dark-mode {
+  color: #ddd;
+}
+
+.nav-links a.dark-mode:hover {
+  color: #74c69d;
+}
+
+.intro.dark-mode {
+  background: #1b4332;
+}
+
+.timeline-content.dark-mode {
+  background: #444;
+}
+
+.skill-category.dark-mode {
+  background: #444;
+}
+
+.education-card.dark-mode {
+  background: #444;
+}
+
+.project-card.dark-mode {
+  background: #444;
+}
+
+.contact.dark-mode {
+  background: #222;
+}
+
+#back-to-top.dark-mode {
+  background-color: #74c69d;
+}
+
+#back-to-top.dark-mode:hover {
+  background-color: #52b788;
 }
