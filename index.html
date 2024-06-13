@@ -1,346 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CV Estevan Biau-Loyer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="styles.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="scripts.js"></script>
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!-- Add this line -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
   <header>
     <nav>
-      <a href="#intro">Introduction</a>
-      <a href="#experience">Experience</a>
-      <a href="#education">Education</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+      <div class="logo">Estevan</div>
+      <div class="nav-links">
+        <a href="#intro">Introduction</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
     </nav>
   </header>
   <main>
     <section id="intro" class="intro">
-      <div id="particles-js"></div>
-      <img src="images/PfP.jpg" alt="Estevan" class="profile-picture">
-      <h1>Hi, I'm Estevan Biau-Loyer</h1>
-      <div class="introdetails">
-        <p>Engineering student and an enthusiast of technology & Computer science, I am passionate about using my skills to solve real-world problems.</p>
-        <p>I lived in, worked and visited multiple countries, giving me a great set of relational skills adaptable to any environment as well as a great overview on the issues the world is and will be facing. I speak fluently French, English, Italian and Spanish. Also as an engineer student I posess extensive knowledge on mathematics, physics, electricity, electronics, programming and IT.</p>
+      <div class="intro-container">
+        <img src="images/PfP.jpg" alt="Estevan" class="profile-picture">
+        <div class="intro-text">
+          <h1>Hi, I'm Estevan Biau-Loyer</h1>
+          <p>Engineering student and an enthusiast of technology & Computer science, I am passionate about using my skills to solve real-world problems.</p>
+          <p>I lived in, worked and visited multiple countries, giving me a great set of relational skills adaptable to any environment as well as a great overview on the issues the world is and will be facing. I speak fluently French, English, Italian and Spanish. Also as an engineer student I posess extensive knowledge on mathematics, physics, electricity, electronics, programming and IT.</p>
+        </div>
       </div>
     </section>
-      <section id="experience" class="experience">
-        <div id="particles-js"></div>
-        <h1>Experience</h1>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="checkpoint">
-              <img src="images/ge-logo.png" alt="Company Logo">
-            </div>
-            <div class="event-left" data-aos="fade-left"  data-aos-duration="2000">
-              <h2>IT engineer intern</h2>
+    <section id="experience" class="experience">
+      <h2>Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-content" data-aos="fade-right">
+            <img src="images/ge-logo.png" alt="Company Logo">
+            <div>
+              <h3>IT engineer intern</h3>
               <p>General Electric</p>
-              <h3>June 2023 - September 2023 | Paris</h3>
+              <span>June 2023 - September 2023 | Paris</span>
             </div>
           </div>
-
-          <div class="timeline-item">
-            <div class="checkpoint">
-              <img src="images/airbus-logo.png" alt="Company Logo">
-            </div>
-            <div class="event-right" data-aos="fade-right"  data-aos-duration="2000">
-              <h2>Operator on the A350 XWB</h2>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content" data-aos="fade-left">
+            <img src="images/airbus-logo.png" alt="Company Logo">
+            <div>
+              <h3>Operator on the A350 XWB</h3>
               <p>Airbus</p>
-              <h3>June 2021 - July 2021 | Toulouse</h3>
+              <span>June 2021 - July 2021 | Toulouse</span>
             </div>
           </div>
-
-          <div class="timeline-item">
-            <div class="checkpoint">
-              <img src="images/aernnova-logo.png" alt="Company Logo">
-            </div>
-            <div class="event-left" data-aos="fade-left" data-aos-duration="2000">
-              <h2>Mechanical design engineer intern</h2>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content" data-aos="fade-right">
+            <img src="images/aernnova-logo.png" alt="Company Logo">
+            <div>
+              <h3>Mechanical design engineer intern</h3>
               <p>Aernnova</p>
-              <h3>June 2017 - July 2017 | Madrid</h3>
+              <span>June 2017 - July 2017 | Madrid</span>
             </div>
           </div>
-
-          <div class="timeline-item">
-            <div class="checkpoint">
-              <img src="images/logo-marine.png" alt="Company Logo">
-            </div>
-            <div class="event-right" data-aos="fade-right" data-aos-duration="2000">
-              <h2>Intern</h2>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content" data-aos="fade-left">
+            <img src="images/logo-marine.png" alt="Company Logo">
+            <div>
+              <h3>Intern</h3>
               <p>French Navy</p>
-              <h3>June 2017 - June 2017 | Brest</h3>
+              <span>June 2017 - June 2017 | Brest</span>
             </div>
           </div>
-
-          <div class="timeline-item">
-            <div class="checkpoint">
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content" data-aos="fade-right">
             <img src="images/danone-logo.png" alt="Company Logo">
-            </div>
-            <div class="event-left" data-aos="fade-left"data-aos-duration="2000" >
-              <h2>Supply chain intern</h2>
+            <div>
+              <h3>Supply chain intern</h3>
               <p>Danone</p>
-              <h3>June 2016 - June 2016 | Madrid</h3>
-            </div>
-          </div>
-          
-          </div>
-
-      </section>
-
-      <section id="education">
-        <h2>Education</h2>
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-front">
-              <img src="images/ecam-logo.png" alt="University Logo" class="university-logo">
-              <h3>Master of Science</h3>
-              <h4>Mechanical and electrical engineering</h4>
-            </div>
-            <div class="card-back">
-              <h1>Courses taken:</h1>
-              <p>-Calculus 1 to 3, General Mechanics, Robotics, Sensing & Perception, Signal Processing, Vibrations, Power electronics, Electrical Machines, Materials, Electrical networks, Mechanical Design, Databases, Computer Programming </p>
+              <span>June 2016 - June 2016 | Madrid</span>
             </div>
           </div>
         </div>
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-front2">
-              <img src="images/hwatt-logo2.png" alt="University Logo" class="university-logo2">
-              <h3>Master of Science</h3>
-              <h4>Robotics</h4>
-            </div>
-            <div class="card-back">
-              <h1>Courses taken:</h1>
-              <p>To be determined</p>
-            </div>
-          </div>
+      </div>
+    </section>
+    <section id="education" class="education">
+      <h2>Education</h2>
+      <div class="education-container">
+        <div class="education-card" data-aos="flip-left">
+          <img src="images/ecam-logo.png" alt="University Logo">
+          <h3>Master of Science</h3>
+          <h4>Mechanical and Electrical Engineering</h4>
+          <p>Courses: Calculus, General Mechanics, Robotics, Signal Processing, etc.</p>
         </div>
-      </section>
-      
+        <div class="education-card" data-aos="flip-right">
+          <img src="images/hwatt-logo2.png" alt="University Logo">
+          <h3>Master of Science</h3>
+          <h4>Robotics</h4>
+          <p>Courses: To be determined</p>
+        </div>
+      </div>
+    </section>
     <section id="skills" class="skills">
       <h2>Skills</h2>
-
-      <div class="skill-category">
-        <h3>Programming Languages</h3>
-        <div class="skill">
-          <h4>Python/Java</h4>
-          <div class="progress">
-            <div class="progress-bar programming" data-percent="90"></div>
-          </div>
+      <div class="skills-container">
+        <div class="skill-category">
+          <h3>Programming Languages</h3>
+          <ul>
+            <li>Python/Java - <div class="skill-level skill-level-90"></div></li>
+            <li>HTML/JavaScript/CSS/PHP - <div class="skill-level skill-level-90"></div></li>
+            <li>C/C++ - <div class="skill-level skill-level-75"></div></li>
+            <li>Matlab/Octave - <div class="skill-level skill-level-75"></div></li>
+          </ul>
         </div>
-        <div class="skill">
-          <h4>HTML/JavaScript/CSS/PHP</h4>
-          <div class="progress">
-            <div class="progress-bar programming" data-percent="90"></div>
-          </div>
+        <div class="skill-category">
+          <h3>Software Skills</h3>
+          <ul>
+            <li>CAD - <div class="skill-level skill-level-100"></div></li>
+            <li>Ansys - <div class="skill-level skill-level-100"></div></li>
+          </ul>
         </div>
-        <div class="skill">
-          <h4>C/C++</h4>
-          <div class="progress">
-            <div class="progress-bar programming" data-percent="75"></div>
-          </div>
-        </div>
-        <div class="skill">
-          <h4>Matlab/Octave</h4>
-          <div class="progress">
-            <div class="progress-bar programming" data-percent="75"></div>
-          </div>
-        </div>
-
-
-      </div>
-
-      <div class="skill-category">
-        <h3>Software Skills</h3>
-        <div class="skill">
-          <h4>CAD</h4>
-          <div class="progress">
-            <div class="progress-bar software" data-percent="70"></div>
-          </div>
-        </div>
-        <div class="skill">
-          <h4>Ansys</h4>
-          <div class="progress">
-            <div class="progress-bar software" data-percent="70"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="skill-category">
-        <h3>Languages</h3>
-        <div class="skill">
-          <h4>French</h4>
-          <div class="progress">
-            <div class="progress-bar languages" data-percent="100"></div>
-          </div>
-        </div>
-        <div class="skill">
-          <h4>English</h4>
-          <div class="progress">
-            <div class="progress-bar languages" data-percent="100"></div>
-          </div>
-        </div>
-        <div class="skill">
-          <h4>Spanish</h4>
-          <div class="progress">
-            <div class="progress-bar languages" data-percent="100"></div>
-          </div>
-        </div>
-        <div class="skill">
-          <h4>Italian</h4>
-          <div class="progress">
-            <div class="progress-bar languages" data-percent="70"></div>
-          </div>
-        </div>
-        <div class="skill">
-          <h4>Japanese</h4>
-          <div class="progress">
-            <div class="progress-bar languages" data-percent="10"></div>
-          </div>
+        <div class="skill-category">
+          <h3>Languages</h3>
+          <ul>
+            <li>French - <div class="skill-level skill-level-100"></div></li>
+            <li>English - <div class="skill-level skill-level-100"></div></li>
+            <li>Spanish - <div class="skill-level skill-level-100"></div></li>
+            <li>Italian - <div class="skill-level skill-level-70"></div></li>
+            <li>Japanese - <div class="skill-level skill-level-10"></div></li>
+          </ul>
         </div>
       </div>
     </section>
-
     <section id="projects" class="projects">
-      <h1>Projects</h1>
-      <div class="projects-section">
-        <div class="project-card">
-          <video src="videos/ECAM ESPORT.mp4" autoplay loop  muted alt="Project 1"></video>
+      <h2>Projects</h2>
+      <div class="projects-container">
+        <div class="project-card" data-aos="fade-up">
+          <video src="videos/ECAM ESPORT.mp4" autoplay loop muted alt="Project 1"></video>
           <div class="project-info">
-            <h3>Fullstack development of the ECAM esport club</h3>
-            <p>As president of the esports club at ECAM, I decided to fully develop a website in order to establish a presence for the club and also have a support where the members could gather</p>
+            <h3>Fullstack Development of ECAM Esport Club</h3>
+            <p>Developed a website to establish a presence for the club and serve as a platform for members.</p>
             <a href="https://esport.ecam.fr" target="_blank">View Project</a>
           </div>
         </div>
-        <div class="project-card">
-          <img src="images/photomakers.jpg"  alt="Project 2" />
+        <div class="project-card" data-aos="fade-up">
+          <img src="images/photomakers.jpg" alt="Project 2">
           <div class="project-info">
-              <h3>Robotic systems engineering</h3>
-              <p>As treasurer and member of the Robotics club at ECAM, I was involved in multiple projects involving the conception of robots</p>
-              <a href="#">View Project</a>
+            <h3>Robotic Systems Engineering</h3>
+            <p>Involved in multiple projects involving the conception of robots as part of the Robotics club at ECAM.</p>
+            <a href="#">View Project</a>
           </div>
         </div>
       </div>
     </section>
-    <section id="contact">
-      <h1>Contact</h1>
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <form id="contact-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit">Send</button>
+      </form>
+      <p>Email: <a href="mailto:estevan@example.coms">estevanbiauloyer@gmail.com</a></p>
+      <p>Phone: +0625067084</p>
     </section>
   </main>
   <button id="back-to-top" title="Back to Top">Top</button>
   <script>
-  particlesJS("particles-js", {
-    particles: {
-      number: {
-        value: 100,
-        density: {
-          enable: true,
-          value_area: 800
-        }
-      },
-      color: {
-        value: "#ffffff"
-      },
-      shape: {
-        type: "circle",
-        stroke: {
-          width: 0,
-          color: "#000000"
-        },
-        polygon: {
-          nb_sides: 5
-        }
-      },
-      opacity: {
-        value: 0.5,
-        random: true,
-        anim: {
-          enable: true,
-          speed: 0.5,
-          opacity_min: 0.1,
-          sync: false
-        }
-      },
-      size: {
-        value: 3,
-        random: true,
-        anim: {
-          enable: false,
-          speed: 40,
-          size_min: 0.1,
-          sync: false
-        }
-      },
-      line_linked: {
-        enable: true,
-        distance: 150,
-        color: "#ffffff",
-        opacity: 0.4,
-        width: 1
-      },
-      move: {
-        enable: true,
-        speed: 2,
-        direction: "none",
-        random: false,
-        straight: false,
-        out_mode: "out",
-        bounce: false,
-        attract: {
-          enable: false,
-          rotateX: 600,
-          rotateY: 1200
-        }
-      }
-    },
-    interactivity: {
-      detect_on: "canvas",
-      events: {
-        onhover: {
-          enable: true,
-          mode: "repulse"
-        },
-        onclick: {
-          enable: true,
-          mode: "push"
-        },
-        resize: true
-      },
-      modes: {
-        grab: {
-          distance: 400,
-          line_linked: {
-            opacity: 1
-          }
-        },
-        bubble: {
-          distance: 400,
-          size: 40,
-          duration: 2,
-          opacity: 8,
-          speed: 3
-        },
-        repulse: {
-          distance: 100,
-          duration: 0.4
-        },
-        push: {
-          particles_nb: 4
-        },
-        remove: {
-          particles_nb: 2
-        }
-      }
-    },
-    retina_detect: true
-  });
-</script>
-<script>
-  AOS.init();
-</script>
-
+    AOS.init();
+  </script>
 </body>
+</html>

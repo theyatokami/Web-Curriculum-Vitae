@@ -1,40 +1,32 @@
 $(document).ready(function() {
-  // Append 'Back to Top' button to body
   $('body').append('<button id="back-to-top" title="Back to Top">Top</button>');
 
   var back_to_top_button = $('#back-to-top');
   var sections = $('section');
   var nav_links = $('nav a');
   var events = $('.event');
-  // Start with first event active
   events.first().addClass('active');
 
   $(window).scroll(function() {
     events.each(function() {
       if ($(this).offset().top <= $(window).scrollTop() + 200) {
-        // Add 'active' class instead of replacing it
         $(this).addClass('active');
       }
     });
   });
 
-  // Function to run when the event enters the viewport
   function handleIntersection(entries, observer) {
     entries.forEach(entry => {
-      // If the event is in the viewport, add the 'active' class
       if (entry.isIntersecting) {
         entry.target.classList.add('active');
       }
     });
   }
 
-  // Create a new Intersection Observer instance
   let observer = new IntersectionObserver(handleIntersection, {
-    // Trigger when the event is 50% in the viewport
     threshold: 0.5
   });
 
-  // Observe each event
   document.querySelectorAll('.event').forEach(event => {
     observer.observe(event);
   });
@@ -61,7 +53,6 @@ $(document).ready(function() {
     );
   }
 
-  // Function to handle scroll events
   function handleScrollAnimations() {
     $('.fade-in').each(function() {
       if (isElementInViewport(this)) {
@@ -76,15 +67,12 @@ $(document).ready(function() {
     });
   }
 
-  // Call handleScrollAnimations() on page load
   handleScrollAnimations();
 
-  // Call handleScrollAnimations() on scroll
   $(window).scroll(function() {
     handleScrollAnimations();
     updateActiveLink();
 
-    // Show 'Back to Top' button after scrolling 100px
     if ($(this).scrollTop() > 100) {
       back_to_top_button.fadeIn();
     } else {
@@ -92,7 +80,6 @@ $(document).ready(function() {
     }
   });
 
-  // Scroll page to top on 'Back to Top' button click
   back_to_top_button.click(function() {
     $('html, body').animate({scrollTop: 0}, 800);
     return false;
@@ -107,47 +94,49 @@ $(document).ready(function() {
     }, 1000, 'swing');
   });
 
-  // Initialize
   updateActiveLink();
 
-  // Animate the progress bars
   function animateProgressBar(progressBar) {
     var percent = progressBar.data('percent');
     progressBar.animate({
       'width': percent + '%'
     }, {
       duration: 3000,
-      easing: 'swing' // This will make the animation start faster
+      easing: 'swing'
     });
   }
+
   $('.profile-picture').on('mouseenter', function() {
     $(this).css({
       'transition': 'transform 2s',
       'transform': 'rotate(360deg)'
     });
   });
-  
-  // On mouse out, profile picture rotates back to original position
+
   $('.profile-picture').on('mouseleave', function() {
     $(this).css({
-      'transition': 'transform 2s', // Transition back at twice the speed
+      'transition': 'transform 2s',
       'transform': 'rotate(0deg)'
     });
   });
+
   $('.project-card').on('mouseenter', function() {
     $(this).css({
-        'transition': 'transform 0.3s',
-        'transform': 'scale(1.05)'
+      'transition': 'transform 0.3s',
+      'transform': 'scale(1.05)'
     });
-});
+  });
 
-$('.project-card').on('mouseleave', function() {
+  $('.project-card').on('mouseleave', function() {
     $(this).css({
-        'transition': 'transform 0.3s',
-        'transform': 'scale(1.0)'
+      'transition': 'transform 0.3s',
+      'transform': 'scale(1.0)'
     });
+  });
+
+  $('#contact-form').submit(function(e) {
+    e.preventDefault();
+    alert('Thank you for contacting me!');
+    this.reset();
+  });
 });
-
-
-});
-
