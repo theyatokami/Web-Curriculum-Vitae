@@ -355,3 +355,65 @@ header.dark-mode {
 #back-to-top.dark-mode:hover {
   background-color: #52b788;
 }
+/* Additional styles for the toggle button */
+
+#dark-mode-toggle {
+  width: 60px;
+  height: 30px;
+  background: #ccc;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.3s ease;
+}
+
+#toggle-thumb {
+  width: 28px;
+  height: 28px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  transition: left 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#toggle-thumb i {
+  display: none;
+}
+
+#toggle-thumb .fa-sun {
+  color: #f39c12;
+}
+
+#toggle-thumb .fa-moon {
+  color: #3498db;
+}
+
+body.dark-mode #dark-mode-toggle {
+  background: #555;
+}
+
+body.dark-mode #toggle-thumb {
+  left: 31px;
+}
+
+body.dark-mode #toggle-thumb .fa-sun {
+  display: none;
+}
+
+body.dark-mode #toggle-thumb .fa-moon {
+  display: block;
+}
+
+body:not(.dark-mode) #toggle-thumb .fa-sun {
+  display: block;
+}
+
+body:not(.dark-mode) #toggle-thumb .fa-moon {
+  display: none;
+}
