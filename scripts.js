@@ -2,8 +2,6 @@ $(document).ready(function() {
   var back_to_top_button = $('#back-to-top');
   var sections = $('section');
   var nav_links = $('nav a');
-  var events = $('.event');
-  events.first().addClass('active');
 
   // Dark mode toggle
   $('#dark-mode-toggle').click(function() {
@@ -19,29 +17,6 @@ $(document).ready(function() {
     $('#back-to-top').toggleClass('dark-mode');
   });
 
-  $(window).scroll(function() {
-    events.each(function() {
-      if ($(this).offset().top <= $(window).scrollTop() + 200) {
-        $(this).addClass('active');
-      }
-    });
-  });
-
-  function handleIntersection(entries, observer) {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('active');
-      }
-    });
-  }
-
-  let observer = new IntersectionObserver(handleIntersection, {
-    threshold: 0.5
-  });
-
-  document.querySelectorAll('.event').forEach(event => {
-    observer.observe(event);
-  });
 
   function updateActiveLink() {
     var scrollPos = $(document).scrollTop();
@@ -72,11 +47,6 @@ $(document).ready(function() {
       }
     });
 
-    $('.progress-bar').each(function() {
-      if (isElementInViewport(this)) {
-        animateProgressBar($(this));
-      }
-    });
   }
 
   handleScrollAnimations();
@@ -108,16 +78,6 @@ $(document).ready(function() {
 
   updateActiveLink();
 
-  function animateProgressBar(progressBar) {
-    var percent = progressBar.data('percent');
-    progressBar.animate({
-      'width': percent + '%'
-    }, {
-      duration: 3000,
-      easing: 'swing'
-    });
-  }
-
   $('.profile-picture').on('mouseenter', function() {
     $(this).css({
       'transition': 'transform 2s',
@@ -146,9 +106,4 @@ $(document).ready(function() {
     });
   });
 
-  $('#contact-form').submit(function(e) {
-    e.preventDefault();
-    alert('Thank you for contacting me!');
-    this.reset();
-  });
 });
