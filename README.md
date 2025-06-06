@@ -15,9 +15,10 @@ It is accessible through this link https://theyatokami.github.io/Web-Curriculum-
 - **Personal Information**: Display your name, contact details, and a brief bio.
 - **Experience**: Highlight your work history, including job positions, companies, and dates.
 - **Education**: Showcase your educational background, including degrees, institutions, and dates.
-- **Skills**: Present your skills in a visually appealing manner, using tags, progress bars, or other suitable representations.
-- **Projects**: Include a section to showcase your notable projects, providing descriptions, links, and relevant details.
-- **Contact Form**: Allow visitors to contact you directly through a contact form.
+- **Skills**: Present your skills in a visually appealing manner, using animated progress bars.
+- **Projects**: Showcase your projects with responsive cards and subtle hover effects.
+- **Dark Mode**: Toggle between light and dark themes for comfortable viewing.
+- **Parallax Hero**: Intro section features a parallax background image for a modern look.
 
 ## Installation
 
