@@ -1,6 +1,4 @@
 $(document).ready(function() {
-  $('body').append('<button id="back-to-top" title="Back to Top">Top</button>');
-
   var back_to_top_button = $('#back-to-top');
   var sections = $('section');
   var nav_links = $('nav a');
