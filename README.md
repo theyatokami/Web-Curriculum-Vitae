@@ -25,10 +25,9 @@ It is accessible through this link https://theyatokami.github.io/Web-Curriculum-
 git clone https://github.com/theyatokami/web-curriculum-vitae.git
 
 2. Navigate to the project directory:
-cd web-cv-project
+cd Web-Curriculum-Vitae
 
-3. Install the dependencies:
-npm install
+3. Open `index.html` in your browser to view the site. No additional dependencies are required.
 
 ## Technologies Used
 
