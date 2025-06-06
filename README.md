@@ -30,6 +30,9 @@ cd web-cv-project
 3. Install the dependencies:
 npm install
 
+4. Run the tests:
+npm test
+
 ## Technologies Used
 
 - HTML
