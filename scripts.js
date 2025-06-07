@@ -3,6 +3,7 @@ $(document).ready(function() {
   var sections = $('section');
   var nav_links = $('nav a');
 
+
   var typedPhrases = ['Engineering Student', 'Robotics Enthusiast', 'Problem Solver'];
   var typedIndex = 0;
   var charIndex = 0;
@@ -21,6 +22,7 @@ $(document).ready(function() {
     }
   }
   typeText();
+
 
   function applyTheme(dark) {
     $('body').toggleClass('dark-mode', dark);
@@ -143,6 +145,7 @@ $(document).ready(function() {
     });
   });
 
+
   $('#load-more').on('click', function() {
     $('.extra-project.hidden').slice(0, 2).removeClass('hidden').hide().fadeIn();
     if ($('.extra-project.hidden').length === 0) {
@@ -169,6 +172,7 @@ $(document).ready(function() {
       $('#project-modal').fadeOut();
     }
   });
+
 
   var skillsAnimated = false;
   function animateSkillBars() {

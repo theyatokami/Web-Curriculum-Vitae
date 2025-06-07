@@ -25,10 +25,12 @@ You can view the live version at [GitHub Pages](https://theyatokami.github.io/We
 - **Animated Skills**: Skill bars animate when they come into view.
 - **Contact Form**: Simple contact form with instant feedback.
 - **Persistent Theme**: Dark mode preference is stored between visits.
+
 - **Typing Animation**: Intro section displays rotating titles.
 - **Scroll Progress Bar**: Shows page progress as you scroll.
 - **Project Modals**: Click projects to view details in a popup.
 - **Load More Projects**: Reveal additional projects interactively.
+
 
 ## Installation
 
