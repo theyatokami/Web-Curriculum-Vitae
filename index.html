@@ -14,6 +14,7 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
+  <div id="progress-bar"></div>
   <header>
     <nav>
       <div class="logo">Estevan</div>
@@ -39,8 +40,9 @@
         <img src="images/PfP.jpg" alt="Estevan" class="profile-picture">
         <div class="intro-text">
           <h1>Hi, I'm Estevan Biau-Loyer</h1>
-          <p>Engineering student and an enthusiast of technology & Computer science, I am passionate about using my skills to solve real-world problems.</p>
-          <p>I lived in, worked and visited multiple countries, giving me a great set of relational skills adaptable to any environment as well as a great overview on the issues the world is and will be facing. I speak fluently French, English, Italian and Spanish. Also as an engineer student I posess extensive knowledge on mathematics, physics, electricity, electronics, programming and IT.</p>
+          <p>Engineering student and technology & computer science enthusiast, I am passionate about using my skills to solve real-world problems.</p>
+          <p>I have lived, worked and visited multiple countries, giving me a great set of interpersonal skills adaptable to any environment as well as a broad overview of the issues the world is and will be facing. I speak French, English, Italian and Spanish fluently. As an engineering student I possess extensive knowledge of mathematics, physics, electronics, programming and IT.</p>
+          <h2 id="typed-text"></h2>
         </div>
       </div>
     </section>
@@ -149,29 +151,82 @@
     </section>
     <section id="projects" class="projects">
       <h2>Projects</h2>
+      <div class="project-filters">
+        <button class="filter-btn" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="robotics">Robotics</button>
+        <button class="filter-btn" data-filter="design">Design</button>
+        <button class="filter-btn" data-filter="data">Data</button>
+      </div>
       <div class="projects-container">
-        <div class="project-card" data-aos="fade-up">
-          <video src="videos/ECAM ESPORT.mp4" autoplay loop muted alt="Project 1"></video>
+        <div class="project-card extra-project hidden" data-category="web" data-aos="fade-up">
+          <video src="videos/ECAM ESPORT.mp4" autoplay loop muted></video>
           <div class="project-info">
             <h3>Fullstack Development of ECAM Esport Club</h3>
             <p>Developed a website to establish a presence for the club and serve as a platform for members.</p>
             <a href="https://esport.ecam.fr" target="_blank">View Project</a>
           </div>
         </div>
-        <div class="project-card" data-aos="fade-up">
-          <img src="images/photomakers.jpg" alt="Project 2">
+        <div class="project-card" data-category="robotics" data-aos="fade-up">
+          <img src="images/photomakers.jpg" alt="Robotics project">
           <div class="project-info">
             <h3>Robotic Systems Engineering</h3>
             <p>Involved in multiple projects involving the conception of robots as part of the Robotics club at ECAM.</p>
             <a href="#">View Project</a>
           </div>
         </div>
+        <div class="project-card extra-project hidden" data-category="web" data-aos="fade-up">
+          <img src="images/ecam-photo.png" alt="Portfolio">
+          <div class="project-info">
+            <h3>Personal Portfolio</h3>
+            <p>Responsive portfolio built with modern web technologies to showcase my work.</p>
+            <a href="#" target="_blank">View Project</a>
+          </div>
+        </div>
+        <div class="project-card extra-project hidden" data-category="data" data-aos="fade-up">
+          <img src="images/tbd.jpg" alt="Data dashboard">
+          <div class="project-info">
+            <h3>Data Visualization Dashboard</h3>
+            <p>Interactive dashboard for analyzing trends and visualizing metrics.</p>
+            <a href="#" target="_blank">View Project</a>
+          </div>
+        </div>
+        <div class="project-card extra-project hidden" data-category="design" data-aos="fade-up">
+          <img src="images/tbd.jpg" alt="3D project">
+          <div class="project-info">
+            <h3>3D Printed Drone</h3>
+            <p>Designed and fabricated a custom drone frame using CAD software and 3D printing.</p>
+            <a href="#" target="_blank">View Project</a>
+          </div>
+        </div>
+        <div class="project-card extra-project hidden" data-category="robotics" data-aos="fade-up">
+          <img src="images/tbd.jpg" alt="Rover">
+          <div class="project-info">
+            <h3>Autonomous Rover</h3>
+            <p>Built a rover platform equipped with sensors for autonomous navigation experiments.</p>
+            <a href="#" target="_blank">View Project</a>
+          </div>
+        </div>
+      </div>
+      <button id="load-more">Load More</button>
+      <div id="project-modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h3 id="modal-title"></h3>
+          <p id="modal-desc"></p>
+          <a id="modal-link" target="_blank">Visit</a>
+        </div>
       </div>
     </section>
     <section id="contact" class="contact">
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:estevan@example.com">estevan@example.com</a></p>
-      <p>Phone: +123 456 7890</p>
+      <form id="contact-form">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <textarea id="message" placeholder="Message" required></textarea>
+        <button type="submit">Send</button>
+        <p id="form-status"></p>
+      </form>
     </section>
   </main>
   <button id="back-to-top" title="Back to Top">Top</button>

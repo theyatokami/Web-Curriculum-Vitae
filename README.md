@@ -1,7 +1,7 @@
 # Web-Curriculum-Vitae
 
 This is a web-based CV (Curriculum Vitae) project designed to showcase your skills, experience, and qualifications in a visually appealing and easily accessible format. The project provides an interactive and user-friendly interface for potential employers or visitors to learn more about you and your professional background.
-It is accessible through this link https://theyatokami.github.io/Web-Curriculum-Vitae/
+You can view the live version at [GitHub Pages](https://theyatokami.github.io/Web-Curriculum-Vitae/).
 
 ## Table of Contents
 
@@ -21,6 +21,14 @@ It is accessible through this link https://theyatokami.github.io/Web-Curriculum-
 - **Parallax Hero**: Intro section features a parallax background image for a modern look.
 - **Sticky Header**: Header shrinks and gains a solid background once you scroll.
 - **Active Navigation**: Current section link is highlighted in the menu.
+- **Project Filters**: Filter projects by category with smooth animations.
+- **Animated Skills**: Skill bars animate when they come into view.
+- **Contact Form**: Simple contact form with instant feedback.
+- **Persistent Theme**: Dark mode preference is stored between visits.
+- **Typing Animation**: Intro section displays rotating titles.
+- **Scroll Progress Bar**: Shows page progress as you scroll.
+- **Project Modals**: Click projects to view details in a popup.
+- **Load More Projects**: Reveal additional projects interactively.
 
 ## Installation
 
