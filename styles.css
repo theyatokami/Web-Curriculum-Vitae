@@ -183,7 +183,7 @@ section {
 .timeline-content {
   display: flex;
   align-items: center;
-  background: var(--card-bg);
+  background: linear-gradient(135deg, var(--card-bg), rgba(255, 255, 255, 0.7));
   backdrop-filter: blur(5px);
   max-width: 800px;
   text-align: left;
@@ -192,6 +192,7 @@ section {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   width: 100%;
   margin: 10px 0;
+  transition: background 0.3s ease;
 }
 
 .timeline-content img {
@@ -478,7 +479,7 @@ header.dark-mode {
 }
 
 .timeline-content.dark-mode {
-  background: var(--card-bg);
+  background: linear-gradient(135deg, var(--card-bg), rgba(40, 40, 40, 0.7));
 }
 
 .skill-category.dark-mode {
@@ -618,6 +619,10 @@ body:not(.dark-mode) #toggle-thumb .fa-moon {
   margin-top: 20px;
   font-size: 1.2em;
   font-weight: 500;
+  width: 22ch;
+  min-height: 1.4em;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 /* Testimonials */
