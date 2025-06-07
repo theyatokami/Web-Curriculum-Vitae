@@ -22,13 +22,14 @@ html {
   scroll-behavior: smooth;
 }
 
+
 h1, h2, h3, h4 {
   font-family: 'Montserrat', Roboto, Arial, sans-serif;
 }
 header {
   position: fixed;
   width: 100%;
-  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+
   transition: background 0.3s ease;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1000;
@@ -75,8 +76,7 @@ section {
 }
 
 .intro {
-  background: url('images/ecam-photo.png') center/cover fixed;
-  position: relative;
+
   color: #ffffff;
   padding: 150px 20px;
 }
@@ -277,7 +277,7 @@ section {
 .skill-level::after {
   content: '';
   height: 100%;
-  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+
   transition: width 0.6s ease;
   border-radius: 5px;
   position: absolute;
@@ -313,12 +313,10 @@ section {
 }
 
 .project-card {
-  background: var(--card-bg);
-  backdrop-filter: blur(4px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   padding: 20px;
   border-radius: 10px;
-  width: 100%;
+
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
   text-align: left;
@@ -395,10 +393,9 @@ body.dark-mode {
 }
 
 header.dark-mode {
-  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-}
-header.dark-mode.scrolled {
-  background: var(--background-color);
+
+  background: linear-gradient(90deg, #222, #555);
+
 }
 
 .nav-links a.dark-mode {
@@ -410,11 +407,9 @@ header.dark-mode.scrolled {
 }
 
 .intro.dark-mode {
-  background: url('images/ecam-photo.png') center/cover fixed;
-}
 
-.intro.dark-mode::before {
-  background: rgba(0, 0, 0, 0.7);
+  background: linear-gradient(135deg, #1b4332, #081c15);
+
 }
 
 .timeline-content.dark-mode {
