@@ -220,20 +220,26 @@ section {
 
 @media (min-width: 900px) {
   .timeline {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    max-width: 900px;
   }
-  .timeline::before,
-  .timeline-item:nth-child(even)::before,
-  .timeline-item:nth-child(odd)::before {
-    display: none;
+}
+
+@media (max-width: 600px) {
+  .timeline::before {
+    left: 20px;
   }
   .timeline-item,
   .timeline-item:nth-child(even),
   .timeline-item:nth-child(odd) {
     width: 100%;
     left: 0;
+    padding-left: 40px;
+  }
+  .timeline-item::before,
+  .timeline-item:nth-child(even)::before,
+  .timeline-item:nth-child(odd)::before {
+    left: 10px;
+    right: auto;
   }
 }
 
