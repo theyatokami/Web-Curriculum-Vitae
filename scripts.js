@@ -3,6 +3,27 @@ $(document).ready(function() {
   var sections = $('section');
   var nav_links = $('nav a');
 
+
+  var typedPhrases = ['Engineering Student', 'Robotics Enthusiast', 'Problem Solver'];
+  var typedIndex = 0;
+  var charIndex = 0;
+
+  function typeText() {
+    if (typedIndex >= typedPhrases.length) typedIndex = 0;
+    var current = typedPhrases[typedIndex];
+    var displayed = current.substring(0, charIndex++);
+    $('#typed-text').text(displayed);
+    if (displayed === current) {
+      charIndex = 0;
+      typedIndex++;
+      setTimeout(typeText, 1500);
+    } else {
+      setTimeout(typeText, 100);
+    }
+  }
+  typeText();
+
+
   function applyTheme(dark) {
     $('body').toggleClass('dark-mode', dark);
     $('header').toggleClass('dark-mode', dark);
@@ -62,6 +83,10 @@ $(document).ready(function() {
   $(window).scroll(function() {
     handleScrollAnimations();
     updateActiveLink();
+    var docHeight = $(document).height() - $(window).height();
+    var scrolled = $(window).scrollTop();
+    var width = (scrolled / docHeight) * 100;
+    $('#progress-bar').css('width', width + '%');
 
     if ($(this).scrollTop() > 50) {
       $('header').addClass('scrolled');
@@ -77,7 +102,7 @@ $(document).ready(function() {
   });
 
   back_to_top_button.click(function() {
-    $('html, body').animate({scrollTop: 0}, 800);
+    $('html, body').animate({scrollTop: 0}, 400);
     return false;
   });
 
@@ -87,7 +112,7 @@ $(document).ready(function() {
     var $target = $(target);
     $('html, body').animate({
       'scrollTop': $target.offset().top
-    }, 1000, 'swing');
+    }, 400, 'swing');
   });
 
   updateActiveLink();
@@ -119,6 +144,35 @@ $(document).ready(function() {
       'transform': 'scale(1.0)'
     });
   });
+
+
+  $('#load-more').on('click', function() {
+    $('.extra-project.hidden').slice(0, 2).removeClass('hidden').hide().fadeIn();
+    if ($('.extra-project.hidden').length === 0) {
+      $(this).hide();
+    }
+  });
+
+  $('.project-card').on('click', function() {
+    var title = $(this).find('h3').text();
+    var desc = $(this).find('p').first().text();
+    var link = $(this).find('a').attr('href');
+    $('#modal-title').text(title);
+    $('#modal-desc').text(desc);
+    $('#modal-link').attr('href', link);
+    $('#project-modal').fadeIn();
+  });
+
+  $('.modal .close').on('click', function() {
+    $('#project-modal').fadeOut();
+  });
+
+  $(window).on('click', function(e) {
+    if ($(e.target).is('#project-modal')) {
+      $('#project-modal').fadeOut();
+    }
+  });
+
 
   var skillsAnimated = false;
   function animateSkillBars() {
