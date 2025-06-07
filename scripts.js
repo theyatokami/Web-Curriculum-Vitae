@@ -198,6 +198,25 @@ $(document).ready(function() {
     }
   });
 
+  // Testimonials slider
+  var testimonials = $('.testimonial');
+  var testimonialIndex = 0;
+
+  function showTestimonial(i) {
+    testimonials.removeClass('active');
+    testimonials.eq(i).addClass('active');
+  }
+
+  $('.testimonial-controls .next').on('click', function() {
+    testimonialIndex = (testimonialIndex + 1) % testimonials.length;
+    showTestimonial(testimonialIndex);
+  });
+
+  $('.testimonial-controls .prev').on('click', function() {
+    testimonialIndex = (testimonialIndex - 1 + testimonials.length) % testimonials.length;
+    showTestimonial(testimonialIndex);
+  });
+
   $('#contact-form').on('submit', function(e) {
     e.preventDefault();
     $('#form-status').text('Message sent! (demo)');
