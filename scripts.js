@@ -146,12 +146,6 @@ $(document).ready(function() {
   });
 
 
-  $('#load-more').on('click', function() {
-    $('.extra-project.hidden').slice(0, 2).removeClass('hidden').hide().fadeIn();
-    if ($('.extra-project.hidden').length === 0) {
-      $(this).hide();
-    }
-  });
 
   $('.project-card').on('click', function() {
     var title = $(this).find('h3').text();
@@ -170,6 +164,24 @@ $(document).ready(function() {
   $(window).on('click', function(e) {
     if ($(e.target).is('#project-modal')) {
       $('#project-modal').fadeOut();
+    }
+  });
+
+  $('.timeline-item').on('click', function() {
+    var title = $(this).find('h3').text();
+    var details = $(this).find('.details').html();
+    $('#exp-modal-title').text(title);
+    $('#exp-modal-desc').html(details);
+    $('#experience-modal').fadeIn();
+  });
+
+  $('#experience-modal .close').on('click', function() {
+    $('#experience-modal').fadeOut();
+  });
+
+  $(window).on('click', function(e) {
+    if ($(e.target).is('#experience-modal')) {
+      $('#experience-modal').fadeOut();
     }
   });
 
