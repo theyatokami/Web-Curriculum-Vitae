@@ -3,18 +3,26 @@ $(document).ready(function() {
   var sections = $('section');
   var nav_links = $('nav a');
 
-  // Dark mode toggle
+  function applyTheme(dark) {
+    $('body').toggleClass('dark-mode', dark);
+    $('header').toggleClass('dark-mode', dark);
+    $('nav a').toggleClass('dark-mode', dark);
+    $('.intro').toggleClass('dark-mode', dark);
+    $('.timeline-content').toggleClass('dark-mode', dark);
+    $('.skill-category').toggleClass('dark-mode', dark);
+    $('.education-card').toggleClass('dark-mode', dark);
+    $('.project-card').toggleClass('dark-mode', dark);
+    $('.contact').toggleClass('dark-mode', dark);
+    $('#back-to-top').toggleClass('dark-mode', dark);
+  }
+
+  var isDark = localStorage.getItem('theme') === 'dark';
+  applyTheme(isDark);
+
   $('#dark-mode-toggle').click(function() {
-    $('body').toggleClass('dark-mode');
-    $('header').toggleClass('dark-mode');
-    $('nav a').toggleClass('dark-mode');
-    $('.intro').toggleClass('dark-mode');
-    $('.timeline-content').toggleClass('dark-mode');
-    $('.skill-category').toggleClass('dark-mode');
-    $('.education-card').toggleClass('dark-mode');
-    $('.project-card').toggleClass('dark-mode');
-    $('.contact').toggleClass('dark-mode');
-    $('#back-to-top').toggleClass('dark-mode');
+    isDark = !isDark;
+    applyTheme(isDark);
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
   });
 
 
@@ -110,6 +118,36 @@ $(document).ready(function() {
       'transition': 'transform 0.3s',
       'transform': 'scale(1.0)'
     });
+  });
+
+  var skillsAnimated = false;
+  function animateSkillBars() {
+    if (skillsAnimated) return;
+    if ($('#skills').offset().top <= $(window).scrollTop() + $(window).height() - 100) {
+      $('.skill-level').addClass('animate');
+      skillsAnimated = true;
+    }
+  }
+
+  animateSkillBars();
+  $(window).on('scroll', animateSkillBars);
+
+  $('.filter-btn').on('click', function() {
+    var filter = $(this).data('filter');
+    $('.filter-btn').removeClass('active');
+    $(this).addClass('active');
+    if (filter === 'all') {
+      $('.project-card').show();
+    } else {
+      $('.project-card').hide();
+      $('.project-card[data-category="' + filter + '"]').show();
+    }
+  });
+
+  $('#contact-form').on('submit', function(e) {
+    e.preventDefault();
+    $('#form-status').text('Message sent! (demo)');
+    this.reset();
   });
 
 });
