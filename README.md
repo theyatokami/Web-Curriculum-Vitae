@@ -19,6 +19,8 @@ It is accessible through this link https://theyatokami.github.io/Web-Curriculum-
 - **Projects**: Showcase your projects with responsive cards and subtle hover effects.
 - **Dark Mode**: Toggle between light and dark themes for comfortable viewing.
 - **Parallax Hero**: Intro section features a parallax background image for a modern look.
+- **Sticky Header**: Header shrinks and gains a solid background once you scroll.
+- **Active Navigation**: Current section link is highlighted in the menu.
 
 ## Installation
 

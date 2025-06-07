@@ -55,6 +55,12 @@ $(document).ready(function() {
     handleScrollAnimations();
     updateActiveLink();
 
+    if ($(this).scrollTop() > 50) {
+      $('header').addClass('scrolled');
+    } else {
+      $('header').removeClass('scrolled');
+    }
+
     if ($(this).scrollTop() > 100) {
       back_to_top_button.fadeIn();
     } else {
