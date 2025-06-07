@@ -4,7 +4,7 @@ $(document).ready(function() {
   var nav_links = $('nav a');
 
 
-  var typedPhrases = ['Engineering Student', 'Robotics Enthusiast', 'Problem Solver'];
+  var typedPhrases = ['Engineering Student', 'Robotics Enthusiast', 'Problem Solver', 'Full-Stack Developer', 'Global Mindset'];
   var typedIndex = 0;
   var charIndex = 0;
 
@@ -155,6 +155,7 @@ $(document).ready(function() {
     $('#modal-desc').text(desc);
     $('#modal-link').attr('href', link);
     $('#project-modal').fadeIn();
+    $('#project-modal').css('display', 'flex');
   });
 
   $('.modal .close').on('click', function() {
@@ -173,6 +174,7 @@ $(document).ready(function() {
     $('#exp-modal-title').text(title);
     $('#exp-modal-desc').html(details);
     $('#experience-modal').fadeIn();
+    $('#experience-modal').css('display', 'flex');
   });
 
   $('#experience-modal .close').on('click', function() {

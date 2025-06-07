@@ -57,11 +57,12 @@ nav {
   margin: 0 15px;
   text-decoration: none;
   color: var(--text-color);
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .nav-links a:hover {
   color: var(--primary-color);
+  transform: scale(1.1);
 }
 .nav-links a.active {
   border-bottom: 2px solid var(--secondary-color);
@@ -89,6 +90,8 @@ section {
   color: #ffffff;
   padding: 150px 20px;
   position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
 }
 
 .intro::before {
@@ -212,6 +215,25 @@ section {
 .timeline-content span {
   font-size: 0.9em;
   color: #777;
+}
+
+@media (min-width: 900px) {
+  .timeline {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .timeline::before,
+  .timeline-item:nth-child(even)::before,
+  .timeline-item:nth-child(odd)::before {
+    display: none;
+  }
+  .timeline-item,
+  .timeline-item:nth-child(even),
+  .timeline-item:nth-child(odd) {
+    width: 100%;
+    left: 0;
+  }
 }
 
 .education-container {
@@ -573,15 +595,16 @@ body:not(.dark-mode) #toggle-thumb .fa-moon {
   background: rgba(0, 0, 0, 0.6);
   justify-content: center;
   align-items: center;
+  padding: 20px;
   z-index: 1002;
 }
 
 .modal-content {
   background: var(--card-bg);
-  padding: 20px;
+  padding: 30px;
   border-radius: 10px;
-  max-width: 500px;
-  width: 90%;
+  max-width: 600px;
+  width: 100%;
   text-align: left;
 }
 
